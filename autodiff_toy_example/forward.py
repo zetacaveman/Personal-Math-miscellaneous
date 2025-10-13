@@ -57,3 +57,11 @@ class Dual:
 
     def __repr__(self):
         return f"Dual(value={self.value}, derivative={self.derivative})"
+
+# ---- Example ----
+x = Dual(2.0, 1.0)
+y = (x**4) + 3*(x**2) + 2*x
+
+
+print(f"f(2) = {y.value}, f'(2) = {y.derivative}")
+# Expected: f(2) = 32.0, f'(2) = 46.0
